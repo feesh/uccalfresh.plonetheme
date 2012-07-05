@@ -7,50 +7,36 @@
     <theme href="theme.html" />
 
 
-    <!--Head--
-    <copy css:content="html" css:theme="html" attributes="lang dir" />
-    <before css:content="head meta" css:theme="head meta" />
-    <drop css:content="head link[rel='shortcut icon']" />
-    <drop css:content="head link[rel='apple-touch-icon']" />    
+    <!-- head -->
+    <replace content='/html/head/title' theme='/html/head/title' />
     <before css:content="head link" css:theme="head link" />    
-    <replace css:content="head title" css:theme="head title" />    
-    <copy css:content="head base" css:theme="head base" />  
 
-    <!-- title --
-    <replace content='/html/head/title'    
-               theme='/html/head/title' />
-               
-    <copy attributes="href title" css:content="#portal-logo" css:theme="#logo" />
-    
-    <copy attributes="href title" css:content="#portal-logo" css:theme="#logo" />
-    
-    <!--<replace css:content="#portal-header p.hiddenStructure" css:theme="#accessibility" />-->
+    <!-- content area -->
+    <copy content='//*[@id="front-page-image"]' theme='//*[@id="front-page-image"]' />
 
-    
-    <!--Content-->
+
     <merge attributes="class" css:content="body" css:theme="body" />
     <copy attributes="id dir" css:content="body" css:theme="body" />
     <replace css:content="#portal-columns" css:theme="#content" />
 
-    <replace content='//*[@id="portal-globalnav"]' 
-            theme='//*[@class="primarynav"]' />
+    <replace content='//*[@id="portal-globalnav"]' theme='//*[@class="primarynav"]' />
     <replace css:content="#portal-globalnav li" css:theme-children="#splash nav ul" />
 
-    <!-- Portlets --
+
+
+    <replace content='//*[@id="portal-globalnav"]' 
+            theme='//*[@class="primary_nav"]' />
+
+    <!-- Portlets -->
    <copy content='//*[@id="portal-logo"]' 
          theme='//*[@id="title"]' />
 
    <copy content='//*[@id="portal-personaltools"]'
          theme='//*[@id="links"]' />
    
-    
 
-    <!--Portlets-->
-    <!-- Control Panel --
-    <after css:content="head script" css:theme="#wrapper" />
-    <after css:content="#visual-portal-wrapper .row:last-child script" css:theme="#wrapper" />
-
-<!-- <drop content='//*/dl/dd/a/img' /> -->
+<drop content='//*/dl/dd/a/img' /> 
 
 </rules>
+
 
